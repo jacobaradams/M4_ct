@@ -118,14 +118,7 @@ def print_menu():
 
 
 print_menu()
-#MyCart = ShoppingCart('Jacob', 'Today')
-#MyCart.add_item()
-#MyCart.add_item()
-#print(MyCart.get_num_items_in_cart())
-#print(MyCart.get_cost_of_cart())
-#MyCart.print_total()
-#MyCart.print_descriptions()
-#print(MyCart.cart_items)
+
 
 
 
