@@ -22,18 +22,18 @@ class ShoppingCart:
         self.current_date = str(current_date)
     cart_items = {}
     def add_item(self):
-        item_to_add = ItemToPurchase(input(), input(), input())
-        self.item_description = input()
+        item_to_add = ItemToPurchase(input('Enter Item Name:'), input('Enter Item Price:'), input('Enter Item Quantity:'))
+        self.item_description = input('Please Describe:')
         self.cart_items[item_to_add.item_name] = [item_to_add.item_price, item_to_add.item_quantity, self.item_description]
 
     def remove_item(self):
-        item_to_remove = input()
+        item_to_remove = input('Enter Name of Item to Remove:')
         if item_to_remove in self.cart_items.keys():
             self.cart_items.pop(item_to_remove)
         else:
             print('Item not found in cart. Nothing removed.')
     def modify_item(self):
-        item_to_modify = ItemToPurchase(input(), input(), input())
+        item_to_modify = ItemToPurchase(input('Current Name:'), input('New Price (Current Price if not changing):'), input('New Quantity (Current Quantity if not changing:'))
         if item_to_modify.item_name in self.cart_items.keys():
             name_change = input('Change name? Y or N:')
             if name_change == 'Y':
